@@ -1,0 +1,507 @@
+---
+title: "Northern Stock of European Hake (hke.27.3a46-8abd)"
+author: "Sonia Sánchez-Maroño"
+date: '2024-04-26'
+output: powerpoint_presentation
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = FALSE, warning = FALSE, message = FALSE)
+```
+
+```{r libs}
+library(knitr)
+
+run <- "saly"
+```
+
+
+# INPUT DATA - update assessment
+
+***
+
+
+# Input data
+
+::: {align="center"}
+  <span class="h3">+++++ Engine Size vs Fuel Consumption +++++</span>
+:::
+
+::::::::: {.columns}
+::: {.column width=40%}
+- 1 area
+- 2 sexes (male, female)
+- 4 seasons
+- 2 spawning periods
+- 9 commercial fleets
+- 7 survey indices
+:::
+::: {.column}
+```{r SSinp}
+include_graphics(file.path("cluster",run,"plots_r4ss","data_plot2.png"))
+```
+:::
+:::::::::
+
+
+# Input data: catches and TACs
+
+::: {}
+```{r cat_tac}
+include_graphics(file.path("data","plots","Pres_EDA_01_catch&tac.png"))
+```
+:::
+
+::: {align="center"}
+  <span class="h3">+++++ Engine Size vs Fuel Consumption +++++</span>
+:::
+++++ BARS COLOURS BY COUNTRY?
+
+# Input data: catches by area
+
+::::::::: {.columns}
+::: {.column}
+```{r landis_area}
+include_graphics(file.path("data","plots","Pres_EDA_02a_landDisc_area.png"))
+```
+:::
+::: {.column}
+
+```{r cat_area}
+include_graphics(file.path("data","plots","Pres_EDA_02b_catch_area.png"))
+```
+:::
+:::::::::
+
+
+# Input data: catches by gear
+
+::::::::: {.columns}
+::: {.column}
+```{r cat_gear}
+include_graphics(file.path("data","plots","Pres_EDA_03a_landDisc_gear.png"))
+```
+:::
+::: {.column}
+```{r cat_fleet}
+include_graphics(file.path("data","plots","Pres_EDA_03b_catch_gear.png"))
+```
+:::
+:::::::::
+
+
+# Input data: surveys
+
+
+::::::::: {.columns}
+::: {.column}
+```{r index}
+include_graphics(file.path("data","plots","Pres_EDA_04_Surveys.png"))
+```
+:::
+::: {.column}
+```{r index_std}
+include_graphics(file.path("cluster",run,"plots_r4ss","index9_standcpueall.png"))
+```
+:::
+:::::::::
+
+
+# Input data: length frequency distributions
+
+Github repository:
+
+<https://github.com/ices-taf/2024_hke.27.3a46-8abd_assessment>
+
+$~$
+
+*./data/plots*
+
+- Pres_EDA_Commercial_LFD.pdf
+- Pres_EDA_Surveys.pdf
+
+
+
+# MODEL RESULTS - update assessment
+
+***
+
+
+# Update assessment: diagnostics
+
+**CONVERGENCE**
+
+- No parameters at or near bounds
+- Convergence level: 0.00126055 is_final_gradient
+- Hessian: 5139.24 is ln(determinant).
+- Jitter runs:
+
++++ 2 figures ++
+
+::::::::: {.columns}
+::: {.column}
+```{r conv}
+# include_graphics(file.path("cluster",run,"plots_r4ss","index9_standcpueall.png"))
+```
+:::
+::: {.column}
+xxx
+:::
+:::::::::
+
+# Update assessment: diagnostics
+
+**JITTER**
+
+
+# Update assessment: diagnostics
+
+**SELECTIVITY**
+
+::::::::: {.columns}
+::: {.column}
+```{r sel}
+include_graphics(file.path("cluster",run,"plots_r4ss","sel01_multiple_fleets_length1.png"))
+```
+:::
+::: {.column}
+::: {.rows}
+::: {.row}
+xxx
+:::
+::: {.row}
+xxx
+:::
+:::
+:::::::::
+
+
+# Update assessment: diagnostics
+
+**RECRUITMENT BIAS ADJUSTMENT**
+
+::::::::: {.columns}
+::: {.column}
+```{r rec_badj}
+include_graphics(file.path("cluster",run,"plots_r4ss","recruit_fit_bias_adjust.png"))
+```
+:::
+::: {.column}
+::: {.row}
+xxx
+:::
+::: {.row}
+xxx
+:::
+:::
+:::::::::
+
+
+# Total landings and discards
+
+```{r lan_dis}
+include_graphics(file.path("output","plots","Pres_ASS_01_landDisc.png"))
+```
+
+
+# Catch estimates by fleet
+
+::::::::: {.columns}
+::: {.column}
+```{r lan_est}
+include_graphics(file.path("output","plots","Pres_ASS_02a_landFleet.png"))
+```
+:::
+::: {.column}
+```{r dis_est}
+include_graphics(file.path("output","plots","Pres_ASS_02b_discFleet.png"))
+```
+:::
+:::::::::
+
+
+# Surveys
+
+::::::::: {.columns}
+::: {.column}
+```{r surv_res}
+include_graphics(file.path("output","plots","Pres_ASS_03a_survRes.png"))
+```
+:::
+::: {.column}
+```{r surv_pres}
+include_graphics(file.path("output","plots","Pres_ASS_03b_survPearsRes.png"))
+```
+:::
+:::::::::
+
+
+# Length frequency distributions
+
+Github repository:
+
+<https://github.com/ices-taf/2024_hke.27.3a46-8abd_assessment>
+
+$~$
+
+*./output/plots*
+
+- Pres_AssOut_EstObs_LFD_Fleets.pdf
+- Pres_AssOut_EstObs_LFD__Surveys.pdf
+
+
+# Runs tests (mean lengths)
+
+2 plots
+
+::::::::: {.columns}
+::: {.column}
+xxx
+:::
+::: {.column}
+xxx
+:::
+:::::::::
+
+```{r rt_ml}
+# include_graphics(file.path("data","plots","Pres_EDA_01_catch&tac.png"))
+```
+
+
+# Summary
+
+```{r sum_plot}
+include_graphics(file.path("output","plots","Pres_ASS_Summary_final.png"))
+```
+
+
+
+# RETROS - update assessment
+
+***
+
+
+# Retros
+
+```{r retro_sum}
+include_graphics(file.path("output","plots","Pres_retroCI_final.png"))
+```
+
+# Retrospective
+
+
+::::::::: {.columns}
+::: {.column}
+```{r retro_r4ss}
+include_graphics(file.path("cluster",run,"plots_retro","Retro3.png")) #! PENDING moving to main
+```
+**r4ss::SSmohnsrho**
+:::
+::: {.column}
+```{r retro_mohn}
+include_graphics(file.path("output","plots","Pres_retroPeels_final.png"))
+```
+**icesAdvice::mohn**
+:::
+:::::::::
+
+
+
+# Retrospective
+
+::::::::: {.columns}
+::: {.column}
+```{r retro_sum2}
+include_graphics(file.path("output","plots","Pres_retroCI_final.png"))
+```
+:::
+::: {.column}
+```{r retro_diagram}
+# include_graphics(file.path("output","plots","Pres_retroCI_final.png"))
+```
+:::
+:::::::::
+
+
+# Retrospective: selectivity
+
+```{r retro_sel}
+include_graphics(file.path("output","plots","Pres_retroSel_final.png"))
+```
+
+
+
+# SHORT-TERM FORECAST - update assessment
+
+***
+
+
+# Short-term forecast
+
+- **Biological parameters** (mean weights-at-age, maturity-at-age): average last 3 year.
+- **Exploitation pattern**: average last 3 years
+- Discard proportions-at-age: average last 3 years
+- **F status-quo** average last 3 years unless there is a clear trend in F, in which case F can be rescaled to the last year.
+- **F in the intermediate year**: F status-quo
+- **Recruitment in the intermediate and forecast years**: from Stock Synthesis ssr (Beverton Holt)
+
+
+# Short-term forecast
+
+## Decisions
+
+Mean last 3 years:
+
+- Biological parameters
+- Exploitation pattern and discard proportions
+- Fsq
+
+
+```{r Fsq}
+# include_graphics(file.path("data","plots","Pres_EDA_01_catch&tac.png"))
+```
+
+# Short-term forecast
+
+- Recruitment estimates in the last or 2 latest data year(s): 
+
+Recruitment in the last data year(s): if the working group believes these are not accurately estimated, it can be replaced with the recruitment predicted from SS stock-recruit relationship.
+
+
+# Short-term forecast
+
+::::::::: {.columns}
+::: {.column}
+:::::: {.rows}
+::: {.row}
+- Recruitment
+
+  - Intermediate and projection years: Beverton-Holt srr
+  
+  - Latest years (2022-2023)?
+  
+  - DECISION: based on available information keep 2022 and 2023 SS3 estimates
+:::
+::: {.row}
+```{r rec_pres}
+include_graphics(file.path("output","plots","Pres_ASS_03b_survPearsRes.png"))
+```
+:::
+:::
+::::::
+::: {.column}
+:::::: {.rows}
+::: {.row}
+```{r rec_devs}
+include_graphics(file.path("cluster",run,"plots_r4ss","recdevs1_points.png"))
+```
+:::
+::: {.row}
+```{r rec_retro}
+include_graphics(file.path("output","plots","Pres_retroCIrec_final.png"))
+```
+:::
+:::
+::::::
+:::::::::
+
+
+# Short-term forecast
+
+**INTERMEDIATE YEAR**
+
+```{r stf_iy}
+iyd <- file.path("model","sum_advice","table_intermediate_year_icesRound.csv")
+iyd
+```
+
+
+**CATCH OPTION TABLE**
+
+```{r stf}
+cad <- file.path("model","sum_advice","catchoptiontable_final_ICESround.csv")
+cad
+```
+
+
+
+# Short-term forecast (REC: geometric mean)
+
+**INTERMEDIATE YEAR**
+
+```{r stfGM_iy}
+iyd <- file.path("model","sum_advice","table_intermediate_yearGM_icesRound.csv")
+iyd
+```
+
+**CATCH OPTION TABLE**
+
+```{r stfGM}
+cad <- file.path("model","sum_advice","catchoptiontableGM_final_ICESround.csv")
+cad
+```
+
+
+
+# ADG comments - other issues
+
+***
+
+General comments:
+
+- There is a MAP but not adopted by UK and Norway so MAP under other scenarios.
+
+- Benchmark in 2022, disaggregation of one of the fleet into two fleets so now 8 fleets instaed of 7, one aditional survey, sex separated model for growth and M.
+
+- Retrospective pattern compared to previous assessment: similar for R and F but larger for SSB.
+
+- Downward revision in perception of the stock.
+
+$~$
+
+Need for an IBP?
+
+- ADG discussion: Looks like we are getting a more complex model without improving the assessment (still large retrospective pattern).
+
+- The stock and fishery are complex so some level complexity is probably needed, however the assessment still needs some ”work” to adress the retrospective patterns so the need of an IBP.
+
+
+
+
+# ASSESSMENT changes (relative to WGBIE 2023) - additional analysis
+
+***
+
+# wgbie24 vs. wgbie23
+
+
++++ plots SSB, F, RECRUITMENT
+
++++ SSB, RECRUITMENT
+
+
++++ Mat*Fecund by season and morph
+
++++ Mat*Fecund global
+
+
+# Figures with caption
+
+```{r}
+dy <- 2023
+cap.main <- "Hake (*Merluccius merluccius*) in subareas 4, 6, and 7, and in divisions 3.a, 8.a–b, and 8.d, Northern stock."
+tab.cap.text <- paste0(cap.main, " Estimates of catches (in ‘000 t) by ICES area for 1961-", dy, " (L: landings and D: discards).")
+foot.cap1 <- "Divisions 3.a and 4.b,c are included in column 3, 4 and 6 only after 1976. There are some unallocated landings (moreover for the period 1961-1970)."
+foot.cap2 <- paste0("Discard estimates from observer programmes. In 2003-", dy, " partial discard estimates are available and used in the assessment. For remaining years for which no values are presented, some estimates are available but not considered valid and thus not used in the assessment.")
+foot.cap3 <- "From 1978 total catches used for the Working Group."
+```
+
+```{r}
+fig.cap.text <- paste0(cap.main, " Total catch (in tonnes) over time, the colours correspond to the fleets used in the assessment model configuration.")
+```
+```{r  fcatch, fig.cap = fig.cap.text, fig.width = 6, fig.height= 5}
+# include_graphics(file.path("report","wg_report",paste0('catch_ss3_fleet', run, '.png')))
+include_graphics(file.path("data","plots","Rep_Figure_9.5_FleetsLFD.png"))
+```
+
+
